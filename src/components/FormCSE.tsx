@@ -260,8 +260,8 @@ export default function FormCSE({ onComplete }: FormCSEProps) {
                         { key: 'billetterieCulture', label: 'Billetterie / culture (places de cinéma, concerts…)' },
                         { key: 'sejoursColonies', label: 'Séjours ou colonies pour enfants' },
                         { key: 'reductionsSportLoisirs', label: 'Réductions sport ou loisirs' },
-                        { key: 'primesCadeaux', label: 'Primes d&apos;objectif ou cadeau entreprise (anniversaire société, résultats…)' },
-                        { key: 'repasEntreprise', label: 'Repas d&apos;entreprise ou pot d&apos;équipe' },
+                        { key: 'primesCadeaux', label: 'Primes d\'objectif ou cadeau entreprise (anniversaire société, résultats…)' },
+{ key: 'repasEntreprise', label: 'Repas d\'entreprise ou pot d\'équipe' },
                         { key: 'abonnementsInternetTV', label: 'Participation aux abonnements Internet, TV, matériel' },
                         { key: 'achatsMateriel', label: 'Achats de matériel (informatique, électro…)' }
                       ].map((type) => (
@@ -284,20 +284,20 @@ export default function FormCSE({ onComplete }: FormCSEProps) {
               <div className="space-y-4">
                 <div className="bg-[#edfffe] border border-[#81ebdf] rounded-lg p-3">
                   <p className="text-[#075650] text-sm font-medium">
-                    💡 Détecter les critères illégaux d&apos;attribution
+                    💡 Détecter les critères illégaux d'attribution
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold mb-3">
-                    Critères d&apos;attribution de vos avantages sociaux ?
+                    Critères d'attribution de vos avantages sociaux ?
                   </h3>
-                  <p className="text-sm text-gray-600 mb-3">Cochez tous ceux qui s&apos;appliquent</p>
+                  <p className="text-sm text-gray-600 mb-3">Cochez tous ceux qui s'appliquent</p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {[
                       { key: 'revenuQuotientFamilial', label: 'Revenu ou quotient familial' },
-                      { key: 'nombreEnfants', label: 'Nombre d&apos;enfants' },
+                      { key: 'nombreEnfants', label: 'Nombre d\'enfants' },
                       { key: 'tranchesSalaire', label: 'Tranches de salaire' },
                       { key: 'anciennete', label: 'Ancienneté (ex : &gt; 6 mois)' },
                       { key: 'typeContrat', label: 'Type de contrat (CDI/CDD)' },
@@ -342,14 +342,14 @@ export default function FormCSE({ onComplete }: FormCSEProps) {
                       { 
                         key: 'justificatifsRemboursements', 
                         question: 'Demandez-vous des justificatifs pour les remboursements ?',
-                        details: 'Factures, reçus, tickets de caisse obligatoires pour tous les remboursements CSE. L&apos;URSSAF peut requalifier en avantage imposable si pas de justificatifs.',
+                        details: 'Factures, reçus, tickets de caisse obligatoires pour tous les remboursements CSE. L\'URSSAF peut requalifier en avantage imposable si pas de justificatifs.',
                         context: 'Ex: remboursement billet de train, repas, activité sportive'
                       },
                       { 
                         key: 'cofinancementEmployeur', 
-                        question: 'L&apos;employeur participe-t-il aux avantages sociaux ?',
-                        details: 'L&apos;employeur contribue aussi aux avantages (chèques vacances, primes, etc.) en plus du CSE.',
-                        context: 'Ex: chèques vacances, primes de fin d&apos;année, tickets restaurant'
+                        question: 'L\'employeur participe-t-il aux avantages sociaux ?',
+details: 'L\'employeur contribue aussi aux avantages (chèques vacances, primes, etc.) en plus du CSE.',
+context: 'Ex: chèques vacances, primes de fin d\'année, tickets restaurant'
                       },
                       { 
                         key: 'verificationPlafonds', 
@@ -360,13 +360,13 @@ export default function FormCSE({ onComplete }: FormCSEProps) {
                       { 
                         key: 'budgetFonctionnementAvantages', 
                         question: 'Utilisez-vous le budget fonctionnement pour des avantages ?',
-                        details: 'Le budget fonctionnement est réservé à la gestion du CSE. L&apos;utiliser pour des avantages = détournement de fonds.',
+                        details: 'Le budget fonctionnement est réservé à la gestion du CSE. L\'utiliser pour des avantages = détournement de fonds.',
                         context: 'Ex: voyages, repas, cadeaux payés avec le budget fonctionnement'
                       },
                       { 
                         key: 'criteresEcritsCommuniques', 
-                        question: 'Avez-vous des critères d&apos;attribution écrits et communiqués ?',
-                        details: 'Les critères d&apos;attribution doivent être écrits dans un règlement et communiqués à tous les salariés.',
+                        question: 'Avez-vous des critères d\'attribution écrits et communiqués ?',
+details: 'Les critères d\'attribution doivent être écrits dans un règlement et communiqués à tous les salariés.',
                         context: 'Ex: règlement intérieur CSE, note de service, affichage'
                       }
                     ].map((gestion) => (
