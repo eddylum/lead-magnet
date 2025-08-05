@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intégration Simulateur CSE</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #075650;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        .iframe-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            height: 800px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        .instructions {
+            background: #edfffe;
+            border: 1px solid #81ebdf;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .instructions h3 {
+            color: #075650;
+            margin-top: 0;
+        }
+        .instructions code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏢 Votre Site Entreprise</h1>
+            <p>Intégration des outils CSE en iframe</p>
+        </div>
+
+        <div class="iframe-container">
+            <div class="iframe-wrapper">
+                <!-- Remplacez l'URL par votre domaine Vercel -->
+                <iframe 
+                    src="http://localhost:3000/tools/cse-simulator" 
+                    title="Simulateur URSSAF CSE"
+                    allow="fullscreen"
+                ></iframe>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>📋 URLs disponibles pour vos iframes</h3>
+            
+            <h4>🎯 Simulateur URSSAF CSE :</h4>
+            <code>https://votre-projet.vercel.app/tools/cse-simulator</code>
+            
+            <h4>📊 Calculateur Budget :</h4>
+            <code>https://votre-projet.vercel.app/tools/budget-calculator</code>
+            
+            <h4>📋 Code HTML pour chaque outil :</h4>
+            <pre><code>&lt;!-- Simulateur URSSAF --&gt;
+&lt;iframe 
+  src="https://votre-projet.vercel.app/tools/cse-simulator" 
+  width="100%" 
+  height="800px" 
+  frameborder="0"
+  style="border: none; border-radius: 8px;"
+&gt;&lt;/iframe&gt;
+
+&lt;!-- Calculateur Budget --&gt;
+&lt;iframe 
+  src="https://votre-projet.vercel.app/tools/budget-calculator" 
+  width="100%" 
+  height="600px" 
+  frameborder="0"
+  style="border: none; border-radius: 8px;"
+&gt;&lt;/iframe&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html> 
