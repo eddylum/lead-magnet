@@ -1,5 +1,4 @@
 {
-  "name": "simulateur-urssaf-cse",
   "version": 2,
   "builds": [
     {
@@ -7,10 +6,10 @@
       "use": "@vercel/next"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ],
   "headers": [
