@@ -252,7 +252,7 @@ export default function FormCSE({ onComplete }: FormCSEProps) {
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-lg font-semibold mb-4">
-                      Quels autres types d&apos;avantages proposez-vous ?
+                      Quels autres types d'avantages proposez-vous ?
                     </h3>
                     
                     <div className="space-y-3">
