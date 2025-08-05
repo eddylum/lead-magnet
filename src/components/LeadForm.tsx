@@ -61,7 +61,7 @@ export default function LeadForm({ resultat, onComplete }: LeadFormProps) {
         onComplete(formData);
       } else {
         const errorData = await response.json();
-        setError(errorData.error || 'Erreur lors de l\'enregistrement');
+        setError(errorData.error || 'Erreur lors de l&apos;enregistrement');
       }
     } catch {
       setError('Erreur de connexion');
@@ -184,7 +184,7 @@ export default function LeadForm({ resultat, onComplete }: LeadFormProps) {
                 ✅ Rapport gratuit et personnalisé
               </p>
               <p className="text-xs text-gray-500">
-                ✅ Recommandations d'experts URSSAF
+                ✅ Recommandations d&apos;experts URSSAF
               </p>
               <p className="text-xs text-gray-500">
                 ✅ Pas de spam, données protégées
