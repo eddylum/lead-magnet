@@ -292,7 +292,7 @@ export default function FormCSE({ onComplete }: FormCSEProps) {
                   <h3 className="text-lg font-semibold mb-3">
                     Critères d'attribution de vos avantages sociaux ?
                   </h3>
-                  <p className="text-sm text-gray-600 mb-3">Cochez tous ceux qui s'appliquent</p>
+                                      <p className="text-sm text-gray-600 mb-3">Cochez tous ceux qui s'appliquent</p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {[
