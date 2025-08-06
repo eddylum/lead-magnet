@@ -16,6 +16,28 @@ export async function POST(request: NextRequest) {
     const zapierWebhookUrl = process.env.ZAPIER_WEBHOOK_URL;
     if (zapierWebhookUrl) {
       try {
+        // Extraction d'informations utiles des données CSE
+        const donneesCSE = body.donneesCSE || {};
+        const resumeCSE = {
+          nombreSalaries: donneesCSE.nombreSalaries || 0,
+          plateformeUtilisee: donneesCSE.plateformeCSE?.nomPlateforme || 'Aucune',
+          dateFinContrat: donneesCSE.plateformeCSE?.dateFinContrat || null,
+          financementPlateforme: donneesCSE.plateformeCSE?.financement || null,
+          utilisePlateforme: donneesCSE.plateformeCSE?.utilisePlateforme || false,
+          // Résumé des avantages
+          avantagesPrincipaux: Object.entries(donneesCSE.avantagesChiffres || {})
+            .filter(([key, value]) => key !== 'autresOccasions' && (value as { montant: number })?.montant > 0)
+            .map(([key, value]) => ({ type: key, montant: (value as { montant: number })?.montant || 0 }))
+            .sort((a, b) => b.montant - a.montant)
+            .slice(0, 3), // Top 3 des avantages
+          // Nombre d'alertes par partie
+          alertesPartie1: (body.resultat?.details?.partie1?.alertes || []).length,
+          alertesPartie2: (body.resultat?.details?.partie2?.alertes || []).length,
+          alertesPartie3: (body.resultat?.details?.partie3?.alertes || []).length,
+          alertesPartie4: (body.resultat?.details?.partie4?.alertes || []).length,
+          alertesPartie5: (body.resultat?.details?.partie5?.alertes || []).length
+        };
+
         const leadData = {
           timestamp: new Date().toISOString(),
           source: 'cse_simulator',
@@ -28,7 +50,9 @@ export async function POST(request: NextRequest) {
             fonction: body.fonction
           },
           resultat: body.resultat || null,
-          score: body.score || null
+          score: body.score || null,
+          donneesCSE: body.donneesCSE || null,
+          resumeCSE: resumeCSE
         };
 
         const response = await fetch(zapierWebhookUrl, {

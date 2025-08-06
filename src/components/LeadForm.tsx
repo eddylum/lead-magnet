@@ -5,10 +5,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
-import { ResultatCalcul } from '@/lib/calculateScore';
+import { ResultatCalcul, DonneesCSE } from '@/lib/calculateScore';
 
 interface LeadFormProps {
   resultat: ResultatCalcul;
+  donneesCSE?: DonneesCSE;
   onComplete: (leadData: {
     prenom: string;
     nom: string;
@@ -19,7 +20,7 @@ interface LeadFormProps {
   }) => void;
 }
 
-export default function LeadForm({ resultat, onComplete }: LeadFormProps) {
+export default function LeadForm({ resultat, donneesCSE, onComplete }: LeadFormProps) {
   const [formData, setFormData] = useState({
     prenom: '',
     nom: '',
@@ -53,7 +54,8 @@ export default function LeadForm({ resultat, onComplete }: LeadFormProps) {
         body: JSON.stringify({
           ...formData,
           resultat: resultat,
-          score: resultat.score
+          score: resultat.score,
+          donneesCSE: donneesCSE
         }),
       });
 

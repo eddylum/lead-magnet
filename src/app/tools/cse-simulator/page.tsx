@@ -138,6 +138,7 @@ export default function CSESimulatorPage() {
             <div className="container mx-auto px-4">
               <LeadForm 
                 resultat={resultat!} 
+                donneesCSE={donneesCSE!}
                 onComplete={handleLeadComplete} 
               />
             </div>
