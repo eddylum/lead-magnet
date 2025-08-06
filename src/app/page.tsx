@@ -14,7 +14,7 @@ export default function Home() {
           href="/tools/cse-simulator"
           className="inline-block bg-gradient-to-r from-[#01debb] to-[#075650] hover:from-[#81ebdf] hover:to-[#075650] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
         >
-          🧮 Commencer l&apos;audit
+          🧮 Commencer l'audit
         </Link>
       </div>
     </div>

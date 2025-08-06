@@ -126,7 +126,7 @@ export default function FullResult({ resultat, donnees, leadData }: FullResultPr
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-orange-600">{totalAlertes}</div>
-                  <div className="text-sm text-gray-600">Points d&apos;attention</div>
+                  <div className="text-sm text-gray-600">Points d'attention</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-purple-600">{partiesAvecAlertes}</div>
@@ -141,7 +141,7 @@ export default function FullResult({ resultat, donnees, leadData }: FullResultPr
         <div className="space-y-6">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Analyse par zones de conformité</h2>
-            <p className="text-gray-600">Détail des points d&apos;attention identifiés dans chaque domaine</p>
+            <p className="text-gray-600">Détail des points d'attention identifiés dans chaque domaine</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -153,7 +153,7 @@ export default function FullResult({ resultat, donnees, leadData }: FullResultPr
                     <div className="text-2xl">🧮</div>
                     <div>
                       <CardTitle className="text-lg">Avantages & Financement</CardTitle>
-                      <CardDescription>Montants et types d&apos;avantages</CardDescription>
+                      <CardDescription>Montants et types d'avantages</CardDescription>
                     </div>
                   </div>
                   <div className={`text-2xl font-bold ${resultat.details.partie1.alertes.length > 0 ? 'text-orange-600' : 'text-green-600'}`}>
@@ -185,7 +185,7 @@ export default function FullResult({ resultat, donnees, leadData }: FullResultPr
                   <div className="flex items-center space-x-3">
                     <div className="text-2xl">👥</div>
                     <div>
-                      <CardTitle className="text-lg">Critères d&apos;attribution</CardTitle>
+                      <CardTitle className="text-lg">Critères d'attribution</CardTitle>
                       <CardDescription>Qui peut bénéficier des avantages</CardDescription>
                     </div>
                   </div>
@@ -325,7 +325,7 @@ export default function FullResult({ resultat, donnees, leadData }: FullResultPr
             <div className="flex items-center space-x-3">
               <div className="text-2xl">💡</div>
               <div>
-                <CardTitle>Recommandations d&apos;experts</CardTitle>
+                <CardTitle>Recommandations d'experts</CardTitle>
                 <CardDescription>Actions prioritaires pour améliorer votre conformité</CardDescription>
               </div>
             </div>
@@ -360,7 +360,7 @@ export default function FullResult({ resultat, donnees, leadData }: FullResultPr
                   <span className="text-purple-600 font-semibold"> Happypal CSE et URSSAF</span>.
                 </p>
                 <p className="text-gray-600 max-w-2xl mx-auto">
-                  Bénéficiez d&apos;un accompagnement sur-mesure pour sécuriser vos avantages sociaux 
+                  Bénéficiez d'un accompagnement sur-mesure pour sécuriser vos avantages sociaux 
                   et optimiser votre budget CSE.
                 </p>
               </div>

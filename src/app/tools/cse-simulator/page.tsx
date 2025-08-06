@@ -81,7 +81,7 @@ export default function CSESimulatorPage() {
             <div className="container mx-auto px-4">
               <div className="text-center mb-8">
                 <h1 className="text-4xl font-bold text-[#075650] mb-4">
-                  Evaluez la conformité de votre CSE avec l&apos;URSSAF
+                  Evaluez la conformité de votre CSE avec l'URSSAF
                 </h1>
                 <p className="text-lg text-[#075650] max-w-3xl mx-auto">
                   Répondez à quelques questions en moins de 2 minutes et recevez un audit personnalisé gratuit.
