@@ -370,8 +370,11 @@ export default function FullResult({ resultat, donnees, leadData }: FullResultPr
                   variant="outline"
                   className="bg-gradient-to-r from-[#01debb] to-[#075650] hover:from-[#81ebdf] hover:to-[#075650] text-white"
                   size="lg"
+                  asChild
                 >
-                  📅 Prendre RDV avec un expert
+                  <a href="https://www.happypal.fr/predemo" target="_blank" rel="noopener noreferrer">
+                    📅 Prendre RDV avec un expert
+                  </a>
                 </Button>
               </div>
               

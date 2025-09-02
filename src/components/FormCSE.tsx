@@ -342,37 +342,31 @@ export default function FormCSE({ onComplete }: FormCSEProps) {
                       { 
                         key: 'justificatifsRemboursements', 
                         question: 'Demandez-vous des justificatifs pour les remboursements ?',
-                        details: 'Factures, reçus, tickets de caisse obligatoires pour tous les remboursements CSE. L\'URSSAF peut requalifier en avantage imposable si pas de justificatifs.',
                         context: 'Ex: remboursement billet de train, repas, activité sportive'
                       },
                       { 
                         key: 'cofinancementEmployeur', 
                         question: 'L\'employeur participe-t-il aux avantages sociaux ?',
-                        details: 'L\'employeur contribue aussi aux avantages (chèques vacances, primes, etc.) en plus du CSE.',
                         context: 'Ex: chèques vacances, primes de fin d\'année, tickets restaurant'
                       },
                       { 
                         key: 'verificationPlafonds', 
                         question: 'Additionnez-vous CSE + employeur pour vérifier les plafonds ?',
-                        details: 'Il faut additionner les contributions CSE + employeur pour vérifier que vous ne dépassez pas les seuils URSSAF.',
                         context: 'Ex: CSE 150€ + employeur 50€ = 200€ (dépasse 196€)'
                       },
                       { 
                         key: 'budgetFonctionnementAvantages', 
                         question: 'Utilisez-vous le budget fonctionnement pour des avantages ?',
-                        details: 'Le budget fonctionnement est réservé à la gestion du CSE. L\'utiliser pour des avantages = détournement de fonds.',
                         context: 'Ex: voyages, repas, cadeaux payés avec le budget fonctionnement'
                       },
                       { 
                         key: 'criteresEcritsCommuniques', 
                         question: 'Avez-vous des critères d\'attribution écrits et communiqués ?',
-                        details: 'Les critères d\'attribution doivent être écrits dans un règlement et communiqués à tous les salariés.',
                         context: 'Ex: règlement intérieur CSE, note de service, affichage'
                       }
                     ].map((gestion) => (
                       <div key={gestion.key} className="border rounded-lg p-3 bg-white">
                         <h3 className="font-semibold text-sm mb-2">{gestion.question}</h3>
-                        <p className="text-xs text-gray-600 mb-2">{gestion.details}</p>
                         <p className="text-xs text-blue-600 mb-3 font-medium">{gestion.context}</p>
                         <RadioGroup
                           value={formData.gestionCSE[gestion.key as keyof typeof formData.gestionCSE] ? 'oui' : 'non'}
@@ -439,6 +433,7 @@ export default function FormCSE({ onComplete }: FormCSEProps) {
                             className="w-full p-2 border rounded-md text-sm"
                           >
                             <option value="">Sélectionnez une plateforme</option>
+                            <option value="HappyPal">HappyPal</option>
                             <option value="Groupe Up / Kalidea">Groupe Up / Kalidea</option>
                             <option value="Hello CSE">Hello CSE</option>
                             <option value="Club employés">Club employés</option>
